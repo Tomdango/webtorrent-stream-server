@@ -1,0 +1,15 @@
+{
+  "name": "webtorrent-stream-server",
+  "version": "1.0.0",
+  "description": "A self-hosted server for streaming video from torrents.",
+  "main": "server.js",
+  "repository": "git@github.com:Tomdango/webtorrent-stream-server.git",
+  "author": "Thomas Judd-Cooper <me@tomjuddcooper.co.uk>",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "http-errors": "^1.7.2",
+    "webtorrent": "^0.103.0"
+  }
+}
