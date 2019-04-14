@@ -11,8 +11,13 @@ app.use('/', indexRouter);
 app.use('/api', apiRouter);
 
 app.options('*', (req, res) => {
-  res.header('Access-Control-Allow-Origin', '*');
-  res.sendStatus(204);
+  res.header('Access-Control-Allow-Origin', 'http://localhost:4000');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, DELETE, PUT');
+  res.header(
+    'Access-Control-Allow-Headers',
+    'X-Requested-With, Content-Type, Authorization, Origin, Accept'
+  );
+  res.sendStatus(200);
 });
 
 app.use((req, res, next) => {
