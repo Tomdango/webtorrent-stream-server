@@ -10,6 +10,11 @@ app.set('view engine', 'ejs');
 app.use('/', indexRouter);
 app.use('/api', apiRouter);
 
+app.options('*', (req, res) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.sendStatus(204);
+});
+
 app.use((req, res, next) => {
   next(createError(404));
 });
